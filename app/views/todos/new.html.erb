@@ -1,0 +1,17 @@
+<div class="main todos-new">
+  <div class="container">
+    <h1 class="form-heading">ToDoを追加する</h1>
+    <%= form_tag("/todos/create") do %>
+      <div class="form">
+        <div class="form-body">
+          <textarea name="content"></textarea>
+          <div class="deadline-select-btn">
+            Deadline<br>
+            <label class="date-edit" ><input type="date" name="deadline" ></label>
+          </div>
+          <input type="submit" value="投稿">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

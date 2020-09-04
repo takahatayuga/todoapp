@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TodoApp</title>
+    <meta http-equiv="cache-control" content="no-cache, no-store">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag('logo.png') %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-left">
+        <div class="header-logo">
+          <%= link_to("ToDoApp", "/", class:"no-underline") %>
+        </div>
+        <div class="header-login-user">
+          <% if user_signed_in? %>
+            user : <%= current_user.username %>
+          <% end %>
+        </div>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("ToDoAppとは", "/about", class:"no-underline") %>
+        </li>
+        <li>
+          <%= link_to("ToDoリスト", "/todos/index", class:"no-underline") %>
+        </li>
+        <li>
+          <%= link_to("ToDo新規作成", "/todos/new", class:"no-underline") %>
+        </li>
+        <li>
+          <%= link_to("ユーザリスト", "/users/index", class:"no-underline") %>
+        </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class:"no-underline" %>
+          </li>
+        <% else %>
+          <li>
+          <%= link_to 'サインアップ', new_user_registration_path, class:"no-underline" %>
+          </li>
+          <li>
+            <%= link_to 'ログイン', new_user_session_path, class:"no-underline" %>
+          </li>
+        <% end %>
+      </ul>
+    </header>
+    <div class="main message">
+      <div class="notice"><%= notice %></div>
+      <div class="alert"><%= alert %></div>
+    </div>
+      <%= yield %>
+  </body>
+</html>

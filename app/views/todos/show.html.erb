@@ -1,0 +1,41 @@
+<div class="main posts-show">
+  <% if @todo.user_id == current_user.id %>
+    <div class="container">
+      <div class="posts-show-item">
+        <p>
+          <%= @todo.content %>
+        </p>
+        <div class="post-user-name">
+          created by <%= link_to(@user.username, "/users/#{@user.id}") %>
+        </div>
+        <% if @todo.deadline %>
+          <div class="deadline">
+            deadline : <%= @todo.deadline.strftime("%Y/%m/%d") %>
+          </div>
+        <% end %>
+        <div class="todos-index-status">
+          status :
+          <% if @todo.status == 0 %>
+            <div class="todos-index-status-not-started">
+              未着手
+            </div>
+          <% end %>
+          <% if @todo.status == 1 %>
+            <div class="todos-index-status-running">
+              実行中
+            </div>
+          <% end %>
+          <% if @todo.status == 2 %>
+            <div class="todos-index-status-completed">
+              完了
+            </div>
+          <% end %>
+        </div>
+        <div class="posts-show-menus">
+          <%= link_to("編集", "/todos/#{@todo.id}/edit") %>
+          <%= link_to("削除", "/todos/#{@todo.id}/destroy", data: {confirm: "削除しますか？"}, method:"post") %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

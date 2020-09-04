@@ -1,0 +1,112 @@
+/* line 5, app/assets/stylesheets/home.scss */
+header {
+  height: 64px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: #66cdaa;
+}
+
+/* line 13, app/assets/stylesheets/home.scss */
+.header a {
+  color: white;
+}
+
+/* line 17, app/assets/stylesheets/home.scss */
+.header-menus {
+  float: right;
+  padding-right: 20px;
+}
+
+/* line 21, app/assets/stylesheets/home.scss */
+.header-menus li {
+  text-decoration: none;
+  float: left;
+  line-height: 64px;
+  font-size: 18px;
+  color: white;
+  padding-left: 15px;
+}
+
+/* line 30, app/assets/stylesheets/home.scss */
+.header-logo {
+  float: left;
+  padding-left: 20px;
+  color: white;
+  font-size: 24px;
+  line-height: 64px;
+  text-decoration: none;
+}
+
+/* line 39, app/assets/stylesheets/home.scss */
+.no-underline {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 44, app/assets/stylesheets/home.scss */
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 50, app/assets/stylesheets/home.scss */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/* line 54, app/assets/stylesheets/home.scss */
+input {
+  background-color: transparent;
+  outline-width: 0;
+}
+
+/* line 59, app/assets/stylesheets/home.scss */
+body {
+  color: #2d3133;
+  background-color: white;
+  margin: 0;
+  min-height: 1vh;
+}
+
+/* line 66, app/assets/stylesheets/home.scss */
+.top-main {
+  padding: 200px 0 100px;
+  text-align: center;
+  color: white;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+  background-image: url("bgimage.jpg");
+}
+
+/* line 76, app/assets/stylesheets/home.scss */
+.about-main {
+  padding: 200px 0 100px;
+  text-align: center;
+  color: white;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+  background-image: url("bgimage.jpg");
+  height: 100%;
+}
+
+/* line 88, app/assets/stylesheets/home.scss */
+.about-main a {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 93, app/assets/stylesheets/home.scss */
+.main {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  padding: 20px 20px;
+}

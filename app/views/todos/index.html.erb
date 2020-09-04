@@ -1,0 +1,87 @@
+<div class="main posts-index">
+  <div class="container">
+    <div class="todos-index-item-category">
+      <% @todos.each do |todo| %>
+        <% if todo.user_id == current_user.id %>
+          <% if todo.status == 0 %>
+            <div class="posts-index-item">
+              <div class="post_content">
+                <%= link_to(todo.content, "/todos/#{todo.id}", class: "todo-index-link") %>
+              </div>
+              <div class="post-user-name">
+                (created by <%= link_to(todo.user.username, "/users/#{todo.user.id}") %>)
+              </div>
+              <% if todo.deadline %>
+              <div class="deadline">
+                deadline : <%= todo.deadline.strftime("%Y/%m/%d") %>
+              </div>
+              <% end %>
+              <div class="todos-index-status">
+                status :
+                  <div class="todos-index-status-not-started">
+                      未着手
+                  </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="todos-index-item-category">
+      <% @todos.each do |todo| %>
+        <% if todo.user_id == current_user.id %>
+          <% if todo.status == 1 %>
+            <div class="posts-index-item">
+              <div class="post_content">
+                <%= link_to(todo.content, "/todos/#{todo.id}", class: "todo-index-link") %>
+              </div>
+              <div class="post-user-name">
+                (created by <%= link_to(todo.user.username, "/users/#{todo.user.id}") %>)
+              </div>
+              <% if todo.deadline %>
+              <div class="deadline">
+                deadline : <%= todo.deadline.strftime("%Y/%m/%d") %>
+              </div>
+              <% end %>
+              <div class="todos-index-status">
+                status :
+                  <div class="todos-index-status-running">
+                      実行中
+                  </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="todos-index-item-category">
+      <% @todos.each do |todo| %>
+        <% if todo.user_id == current_user.id %>
+          <% if todo.status == 2 %>
+            <div class="posts-index-item">
+              <div class="post_content">
+                <%= link_to(todo.content, "/todos/#{todo.id}", class: "todo-index-link") %>
+              </div>
+              <div class="post-user-name">
+                (created by <%= link_to(todo.user.username, "/users/#{todo.user.id}") %>)
+              </div>
+              <% if todo.deadline %>
+              <div class="deadline">
+                deadline : <%= todo.deadline.strftime("%Y/%m/%d") %>
+              </div>
+              <% end %>
+              <div class="todos-index-status">
+                status :
+                  <div class="todos-index-status-completed">
+                    完了
+                  </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

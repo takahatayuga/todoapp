@@ -1,0 +1,272 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+header {
+  height: 64px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: #66cdaa;
+}
+
+.header a {
+  color: white;
+}
+
+.header-menus{
+  float: right;
+  padding-right: 20px;
+}
+.header-menus li{
+  text-decoration: none;
+  float: left;
+  line-height: 64px;
+  font-size: 18px;
+  color: white;
+  padding-left: 15px;
+}
+
+.header-logo {
+  display: inline-block;
+  float: left;
+  padding-left: 20px;
+  color: white;
+  font-size: 24px;
+  line-height: 64px;
+  text-decoration: none;
+}
+
+.header-login-user{
+  display: inline-block;
+  float: left;
+  padding-left: 20px;
+  color: white;
+  font-size: 16px;
+  line-height: 64px;
+  text-decoration: none;
+}
+
+.no-underline{
+  text-decoration: none;
+  color: white;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+input {
+  background-color: transparent;
+  outline-width: 0;
+}
+
+body {
+  color: #2d3133;
+  background-color: white;
+  margin: 0;
+  min-height: 1vh;
+}
+
+.top-main {
+  padding: 100px 0px 200px;
+  text-align: center;
+  color: white;
+  background-color: white;
+  background-repeat: repeat;
+  background-position: center 50%;
+  background-image: url("bg098_10.gif");
+  height: auto;
+  z-index: 0
+}
+.about-main {
+  text-align: center;
+  color: white;
+  background-color: white;
+  background-repeat: repeat;
+  background-position: center 50%;
+  background-image: url("bg098_10.gif");
+  height: auto;
+}
+
+.about-main a{
+  text-decoration: none;
+  color: black;
+}
+
+.about-content{
+  color: black;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.main {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+.date-edit {
+  position: relative;
+}
+
+.date-edit::before {
+    content: "";
+    position: absolute;
+    border-radius: 28px;
+    height: 50px;
+    width: 50px;
+}
+
+input[type="date"] {
+  padding: 10px;
+  text-align: center;
+}
+
+.posts-index{
+  background-color: white;
+  background-repeat: repeat;
+  background-position: center 50%;
+  background-image: url("bg098_10.gif");
+  height: auto;
+}
+
+.posts-index-item{
+  position: relative;
+  background-color: white;
+  border: solid;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px 10px;
+  box-shadow: 4px 4px 4px #707070;
+  width: 180px;
+}
+
+.todos-index-item-category{
+  float: left;
+  margin: 0px 20px;
+}
+
+.posts-show{
+  background-color: white;
+  background-repeat: repeat;
+  background-position: center 50%;
+  background-image: url("bg098_10.gif");
+  height: auto;
+}
+
+.posts-show-item{
+  background-color: white;
+  font-size: 20px;
+  border: solid;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 10px 10px;
+  box-shadow: 4px 4px 4px #707070;
+}
+
+.posts-show-item p{
+  font-weight: bold;
+}
+
+.posts-show-menus{
+  font-size: 16px;
+}
+
+.post_content .todo-index-link{
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.post-user-name a{
+  text-decoration: none;
+  color: red;
+}
+
+.todos-index-status-not-started{
+  display: inline-block;
+  background-color: #FF0033;
+  color: white;
+  border-radius: 10px 10px;
+  font-size: 16px;
+  padding: 3px 10px;
+}
+
+.todos-index-status-running{
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  border-radius: 10px 10px;
+  font-size: 16px;
+  padding: 3px 10px;
+}
+
+.todos-index-status-completed{
+  display: inline-block;
+  background-color: green;
+  color: white;
+  border-radius: 10px 10px;
+  font-size: 16px;
+  padding: 3px 10px;
+}
+
+.todos-new{
+  background-color: white;
+  background-repeat: repeat;
+  background-position: center 50%;
+  background-image: url("bg098_10.gif");
+  height: auto;
+  color: black;
+}
+
+.todos-new .container{
+  text-align: center;
+  padding: 100px 0px;
+}
+textarea {
+  resize: none;
+  width:240px;
+  height:100px;
+}
+
+input{
+  color: black;
+  background-color: white;
+}
+
+.notice {
+  color: white;
+  background-color: blue;
+  z-index: 0
+}
+.alert {
+  color: white;
+  background-color: red;
+  z-index: 1
+}
+
+.message{
+}
+
+.registration{
+  padding: 30px;
+}
+
+.login-form{
+  padding:30px;
+}

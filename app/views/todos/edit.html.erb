@@ -1,0 +1,22 @@
+<div class="main todos-new">
+  <div class="container">
+    <h1 class="form-heading">編集する</h1>
+    <%= form_tag("/todos/#{@todo.id}/update") do %>
+      <div class="form">
+        <div class="form-body">
+          <textarea name="content"><%= @todo.content %></textarea>
+          <div class="deadline-select-btn">
+            Deadline<br>
+            <label class="date-edit" ><input type="date" name="deadline" value=<%= @todo.deadline %>></label>
+          </div>
+          <div class="status-select-btn">
+            <input type="radio" name="status" value=0 checked>未着手
+            <input type="radio" name="status" value=1>実行中
+            <input type="radio" name="status" value=2>完了
+          </div>
+          <input type="submit" value="保存">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
